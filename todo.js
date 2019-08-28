@@ -1,13 +1,11 @@
-gvar todos = ['item1', 'item 2', "item 3']; 
-
-// It should have a function to display todos. 
-// 
+var todos = ['item1', 'item 2', 'item 3']; 
+// It should have a function to display todos.  
 function displayTodos() { 
-    console.log('My todos:', todos)
-}; 
+    console.log('My todos:', todos);
+}
 
 // It should have a function to add todos. 
-function add todo(todo) { 
+function addTodo(todo) { 
     todos.push(todo); 
     displayTodos (); 
 }
