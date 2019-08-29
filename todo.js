@@ -1,11 +1,11 @@
-var todoLlist = {
+var todoList = {
     todos:['item1', 'item 2', 'item 3'], 
     displayTodos () { 
         console.log('My Todos', this.todos); 
     }, 
-    addTodo () { 
+    addTodo (todo) { 
         this.todos.push(todo); 
-        this.displayTodos(todo); 
+        this.displayTodos(); 
     }, 
     changeTodo (position, newValue) { 
         this.todos[position] = newValue; 
