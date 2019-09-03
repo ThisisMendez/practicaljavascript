@@ -56,7 +56,18 @@ var todoList = {
                 this.todos[i].completed = true; 
             }
         }
+        
         this.displayTodos (); 
     }
 }; 
 
+var displayTodosButton = document.getElementById('displayTodosButton');
+var toggleAllButton = document.getElementById('toggleAllButton');
+
+displayTodosButton.addEventListeners('click', () {
+    todoList.displayTodos (); 
+}); 
+
+toggleAllButton.addEventListener('click', () { 
+    todoList.toggleAll();
+}); 
