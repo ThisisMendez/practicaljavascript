@@ -73,12 +73,12 @@ var handlers = {
     changeTodo () { 
         var changeTodoPositionInput = document.getElementById('changeTodoPositionInput'); 
         var changeTodoTextInput = document.getElementById('changeTodoTextInput');
-        todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput); 
+        todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput.value); 
         changeTodoPositionInput.value = ''; 
         changeTodoTextInput.value = ''; 
     }, 
     deleteTodo () { 
-        var deleteTodoPositionInput = document.getElementById(deleteTodoPositionInput); 
+        var deleteTodoPositionInput = document.getElementById('deleteTodoPositionInput'); 
         todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber); 
         deleteTodoPositionInput.value = ''; 
     }, 
