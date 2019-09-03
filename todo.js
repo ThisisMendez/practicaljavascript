@@ -61,6 +61,42 @@ var todoList = {
     }
 }; 
 
+var handlers = { 
+    displayTodos () { 
+        todoList.displayTodos();
+    },
+    addTodo: () { 
+        var addTodoTextInput = document.getElementById('addTodoTextInput');
+        todoList.addTodo(addTodoTextInput.value);
+        addTodoTextInput.value = '';
+    },
+    changeTodo: () { 
+        var changeTodoPositionInput = document.getElementById('changeTodoPositionInput'); 
+        var changeTodoTextInput = document.getElementById('changeTodoTextInput');
+        todoList.changeTodo(changeTodoPositionInput.valueAsNumber, changeTodoTextInput); 
+        changeTodoPositionInput.value = ''; 
+        changeTodoTextInput.value = ''; 
+    }, 
+    deleteTodo: () { 
+        var deleteTodoPositionInput = document.getElementById(deleteTodoPositionInput); 
+        todoList.deleteTodo(deleteTodoPositionInput.valueAsNumber); 
+        deleteTodoPositionInput.value = ''; 
+    }, 
+    toggleCompleted: () { 
+        var toggleCompletedPositionInput = document.getElementById('toggleCompletedPositionInput'); 
+        todoList.toggleCompleted(toggleCompletedPositionInput.valueAsNumber); 
+        toggleCompletedPositionInput.value = "";
+    }, 
+    toggleAll: (){
+        todoList.toggleAll(); 
+    }
+}; 
+
+    }
+
+
+
+
 var displayTodosButton = document.getElementById('displayTodosButton');
 var toggleAllButton = document.getElementById('toggleAllButton');
 
