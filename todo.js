@@ -31,7 +31,7 @@ var todoList = {
     }, 
     toggleCompleted (position) { 
         var todo = this.todos[position];
-        todo.completed = todo.completed;
+        todo.completed = !todo.completed;
         this.displayTodos();
     }
 }; 
