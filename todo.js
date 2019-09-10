@@ -7,13 +7,13 @@ var todoList = {
         }); 
     }, 
     changeTodo (position, todoText) { 
-        this.todos[position].todoText = todoText; 
+        this.todos[position-1].todoText = todoText; 
     }, 
     deleteTodo (position) { 
-        this.todos.splice(position,1); 
+        this.todos.splice(position-1,1); 
     }, 
     toggleCompleted (position) { 
-        var todo = this.todos[position];
+        var todo = this.todos[position-1];
         todo.completed = !todo.completed;
     }, 
     toggleAll () { 
